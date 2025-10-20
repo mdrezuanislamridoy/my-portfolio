@@ -1,0 +1,7 @@
+pre[class*="language-"] {
+  background: transparent !important;
+  color: #e2e8f0;
+}
+code[class*="language-"] {
+  background: transparent !important;
+}
