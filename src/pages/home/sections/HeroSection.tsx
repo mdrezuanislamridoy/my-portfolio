@@ -98,7 +98,6 @@ const coder = {
         </a>
       </div>
 
-      {/* === RIGHT SIDE === */}
       <div className="bg-[#0f172a] text-gray-100 rounded-2xl shadow-lg p-4 w-full md:w-1/2 max-h-[500px] mx-auto font-mono">
         <div className="flex gap-2 mb-3">
           <span className="w-3 h-3 bg-red-500 rounded-full"></span>
@@ -106,7 +105,7 @@ const coder = {
           <span className="w-3 h-3 bg-green-500 rounded-full"></span>
         </div>
         <hr className="border-cyan-900 border-2 rounded-2xl mb-3" />
-        <pre className="language-js text-sm overflow-x-auto">
+        <pre className="language-js text-sm whitespace-pre-wrap break-words overflow-x-hidden overflow-y-auto">
           <code>{code}</code>
         </pre>
       </div>

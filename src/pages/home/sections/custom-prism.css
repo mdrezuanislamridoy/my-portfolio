@@ -5,3 +5,7 @@ pre[class*="language-"] {
 code[class*="language-"] {
   background: transparent !important;
 }
+
+pre::-webkit-scrollbar {
+  display: none;
+}

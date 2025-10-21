@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="w-full  bg-slate-900 shadow-2xl shadow-slate-900">
+    <header className="w-full  bg-slate-900 shadow-2xl shadow-slate-900 sticky top-0 z-90">
       <div className="flex max-w-7xl m-auto justify-between items-center p-3 relative">
         <h2
           className="text-2xl  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400  font-bold
