@@ -9,7 +9,10 @@ import {
 
 export default function About() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 px-6 md:px-10 overflow-hidden">
+    <section
+      className="relative w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 px-6 md:px-10 overflow-hidden"
+      id="about"
+    >
       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
 
@@ -59,12 +62,14 @@ export default function About() {
             <SiTypescript title="TypeScript" />
           </div>
 
-          <button className="mt-8 px-5 py-2.5 bg-blue-500/10 text-blue-300 border border-blue-400 rounded-xl hover:bg-blue-500/20 transition duration-300">
+          <a
+            href="#projects"
+            className="inline-block mt-8 px-5 py-2.5 bg-blue-500/10 text-blue-300 border border-blue-400 rounded-xl hover:bg-blue-500/20 transition duration-300 cursor-none"
+          >
             View My Projects →
-          </button>
+          </a>
         </div>
 
-        {/* Right Section */}
         <div className="relative w-full md:w-1/2 flex justify-center">
           <div className="relative w-[280px] h-[350px] rounded-3xl overflow-hidden shadow-xl shadow-blue-900/30 bg-white/5 backdrop-blur-md border border-white/10">
             <img

@@ -7,7 +7,7 @@ const projects = [
       "A travel web app with user, agency, and admin panels featuring authentication, booking, and chat system.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     image: "/projects/mynexttrip.png",
-    github: "https://github.com/yourusername/mynexttrip",
+    github: "https://github.com/mdrezuanislamridoy/MyNextTrip",
     live: "#",
   },
   {
@@ -32,7 +32,10 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="w-full py-20 px-6 md:px-10 bg-gray-900 text-gray-100">
+    <section
+      className="w-full py-20 px-6 md:px-10 bg-gray-900 text-gray-100"
+      id="projects"
+    >
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-white">
           Featured <span className="text-blue-400">Projects</span>
@@ -81,7 +84,7 @@ export default function FeaturedProjects() {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-300 transition"
+                  className="hover:text-blue-300 transition cursor-none"
                 >
                   <FaExternalLinkAlt />
                 </a>
@@ -90,7 +93,7 @@ export default function FeaturedProjects() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-300 transition"
+                className="hover:text-blue-300 transition cursor-none"
               >
                 <FaGithub />
               </a>
@@ -104,7 +107,7 @@ export default function FeaturedProjects() {
           href="https://github.com/mdrezuanislamridoy"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-6 py-3 bg-blue-500/10 border border-blue-400 text-blue-300 rounded-xl hover:bg-blue-500/20 transition duration-300"
+          className="inline-block px-6 py-3 cursor-none bg-blue-500/10 border border-blue-400 text-blue-300 rounded-xl hover:bg-blue-500/20 transition duration-300"
         >
           Check My Github →
         </a>

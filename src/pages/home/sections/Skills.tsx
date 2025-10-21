@@ -20,6 +20,7 @@ const skills = [
 export default function Skills() {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
+  const [isHoveredThis, setIsHoveredThis] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -41,7 +42,10 @@ export default function Skills() {
   }, [isHovered, controls]);
 
   return (
-    <div className="overflow-hidden relative w-full max-w-7xl mx-auto">
+    <div
+      className="overflow-hidden relative w-full max-w-7xl mx-auto"
+      id="skills"
+    >
       <h2 className="text-2xl font-bold text-center mt-6">Skills</h2>
       <hr className="border-blue-400 border-2 w-26 my-2 rounded-3xl mx-auto " />
 
@@ -60,11 +64,15 @@ export default function Skills() {
             {skills.map((skill) => (
               <motion.div
                 key={skill.name}
-                className="flex flex-col items-center justify-center min-w-[130px] bg-slate-800 p-4 rounded-md hover:bg-slate-700 transition-colors duration-300"
+                className="flex group  flex-col items-center justify-center min-w-[130px] bg-slate-800 p-4 rounded-md hover:bg-slate-700 transition-colors duration-300"
                 whileHover={{ scale: 1.2 }}
+                onMouseEnter={() => {
+                  setIsHoveredThis(true);
+                }}
+                onMouseLeave={() => setIsHoveredThis(false)}
               >
                 <motion.img
-                  className="w-16 h-16 object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
+                  className={`w-16 h-16 object-contain opacity-40 transition-opacity duration-300 group-hover:opacity-100 group-hover:scale-110`}
                   src={skill.image}
                   alt={skill.name}
                 />

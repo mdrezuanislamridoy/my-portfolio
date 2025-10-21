@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full  bg-slate-900 shadow-2xl shadow-slate-900">
+    <header className="w-full  bg-slate-900 shadow-2xl shadow-slate-900">
       <div className="flex max-w-7xl m-auto justify-between items-center p-3 relative">
         <h2
           className="text-2xl  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400  font-bold
@@ -24,21 +24,19 @@ export default function Navbar() {
           Ridoy Babu
         </h2>
 
-        {/* Desktop links */}
         <ul className="hidden md:flex gap-6 text-slate-400">
           {links.map((link) => (
             <li key={link.name}>
-              <Link
+              <a
                 className="hover:text-white transition-colors duration-200"
-                to={link.path}
+                href={link.path}
               >
                 {link.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
 
-        {/* Mobile menu button */}
         <button
           className="md:hidden text-2xl text-slate-200 z-50"
           onClick={() => setVisible(!visible)}
@@ -46,7 +44,6 @@ export default function Navbar() {
           {visible ? <IoCloseCircleOutline /> : <FaBarsStaggered />}
         </button>
 
-        {/* Mobile menu */}
         <div
           className={`md:hidden fixed top-0 right-0 h-full w-1/2 bg-slate-700 p-6 rounded-l-2xl shadow-lg transition-all duration-300 ease-in-out transform
         ${
@@ -68,6 +65,6 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

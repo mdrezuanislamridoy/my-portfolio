@@ -52,7 +52,6 @@ const coder = {
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-12 max-w-7xl mx-auto">
-      {/* === LEFT SIDE === */}
       <div className="flex flex-col items-start gap-6 w-full md:w-1/2">
         <div>
           <h2 className="text-xl md:text-2xl text-blue-400 font-semibold tracking-wide animate-pulse">
@@ -83,7 +82,7 @@ const coder = {
               href={link.path}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-300 hover:text-cyan-400 transition-colors duration-300"
+              className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 cursor-none"
             >
               {link.icon}
             </a>
@@ -91,7 +90,7 @@ const coder = {
         </div>
 
         <a
-          className="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 "
+          className="mt-6 cursor-none inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 "
           href="Resume.pdf"
           target="_blank"
         >
