@@ -23,31 +23,27 @@ export default function About() {
           </div>
           <div className="h-1 w-16 bg-blue-400 rounded-full my-3 mx-auto md:mx-0"></div>
 
-          <p className="text-gray-300 leading-relaxed text-sm md:text-base">
-            I'm a{" "}
-            <span className="text-blue-300 font-semibold">
-              full stack web developer{" "}
-            </span>
-            specializing in backends. I like to develop dependable, efficient
-            systems that serve as the foundation for incredible digital
-            experiences. While I enjoy designing straightforward, uncluttered
-            front-ends with the most recent technologies, my real ability lies
-            in developing secure APIs to manage the flow of data and enhance
-            back-end performance.
-          </p>
-
           <p className="text-gray-400 mt-3 text-sm md:text-base">
-            The technologies I use most for building scalable, easy to maintain
-            and extend backends:{" "}
+            I'm working with the
+            <span className="text-blue-400 font-semibold"> MERN stack </span>
+            and focused on{" "}
+            <span className="text-blue-400 font-semibold">
+              backend development.
+            </span>{" "}
+            I'm skilled in {""}
             <span className="text-blue-300 font-semibold">Node.js</span>,{" "}
             <span className="text-blue-300 font-semibold">Express</span>,{" "}
+            <span className="text-blue-300 font-semibold">TypeScript</span>,{" "}
+            <span className="text-blue-300 font-semibold">MongoDB</span>, and .
+            I'm also exploring new technologies like{" "}
             <span className="text-blue-300 font-semibold">NestJS</span>,{" "}
-            <span className="text-blue-300 font-semibold">MongoDB</span>,{" "}
-            <span className="text-blue-300 font-semibold">PostgreSQL</span>, and{" "}
-            <span className="text-blue-300 font-semibold">TypeScript</span>. I'm
-            passionate about writing compatible, well organised code and
-            converting complex ideas into reliable solutions that work in
-            production.
+            <span className="text-blue-300 font-semibold">PostgreSQL</span> ,{" "}
+            <span className="text-blue-300 font-semibold">Socket.io</span>, and
+            other modern tools. I've also worked on frontend development with{" "}
+            <span className="text-blue-300 font-semibold">React.js</span> and{" "}
+            {""}
+            <span className="text-blue-300 font-semibold">Zustand</span> for
+            state management
           </p>
 
           <div className="flex justify-center md:justify-start gap-6 mt-6 text-4xl text-blue-400">
@@ -71,7 +67,7 @@ export default function About() {
         <div className="relative w-full md:w-1/2 flex justify-center">
           <div className="relative w-[280px] h-[350px] rounded-3xl overflow-hidden shadow-xl shadow-blue-900/30 bg-white/5 backdrop-blur-md border border-white/10">
             <img
-              src="/me.jpg"
+              src="/me.png"
               alt="MD Ridoy Babu"
               className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
             />
