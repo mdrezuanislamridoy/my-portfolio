@@ -1,4 +1,5 @@
 import { FaNodeJs } from "react-icons/fa";
+import { FaReact } from "react-icons/fa6";
 import {
   SiExpress,
   SiNestjs,
@@ -50,6 +51,7 @@ export default function About() {
           </p>
 
           <div className="flex justify-center md:justify-start gap-6 mt-6 text-4xl text-blue-400">
+            <FaReact title="React" />
             <FaNodeJs title="Node.js" />
             <SiExpress title="Express.js" />
             <SiNestjs title="NestJS" />
