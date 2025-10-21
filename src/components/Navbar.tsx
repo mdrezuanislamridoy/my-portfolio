@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
@@ -53,13 +52,13 @@ export default function Navbar() {
           <ul className="flex flex-col gap-4 text-slate-200 mt-12">
             {links.map((link) => (
               <li key={link.name}>
-                <Link
+                <a
                   className="block py-2 px-3 rounded-lg hover:bg-slate-600 hover:text-white transition-all duration-200"
-                  to={link.path}
+                  href={link.path}
                   onClick={() => setVisible(false)}
                 >
                   {link.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
