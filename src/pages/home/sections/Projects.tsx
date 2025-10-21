@@ -33,13 +33,15 @@ const projects = [
 export default function FeaturedProjects() {
   return (
     <section
-      className="w-full py-20 px-6 md:px-10 bg-gray-900 text-gray-100"
+      className="w-full max-w-7xl mx-auto  py-20 px-6 md:px-10  text-gray-100"
       id="projects"
     >
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-white">
           Featured <span className="text-blue-400">Projects</span>
         </h2>
+        <hr className="border-blue-400 border-2 w-36 my-2 rounded-3xl mx-auto mb-6" />
+
         <p className="text-gray-400 mt-3 text-base">
           Here are some of my recent projects. Each one was built with a focus
           on performance, scalability, and real-world functionality.

@@ -69,9 +69,10 @@ export default function Contact() {
       className="w-full max-w-7xl mx-auto py-20 px-6 md:px-10  text-gray-100"
       id="contact"
     >
-      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-12">
+      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 ">
         Get In Touch
       </h2>
+      <hr className="border-blue-400 border-2 w-26 my-2 rounded-3xl mx-auto mb-12" />
 
       <div className="flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-1/2 bg-gray-900/50 p-8 rounded-2xl shadow-md border border-blue-900/30 backdrop-blur-sm">

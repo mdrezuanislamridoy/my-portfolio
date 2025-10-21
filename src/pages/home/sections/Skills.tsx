@@ -1,4 +1,4 @@
-import { motion, scale, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const skills = [
@@ -20,7 +20,6 @@ const skills = [
 export default function Skills() {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
-  const [isHoveredThis, setIsHoveredThis] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -66,10 +65,6 @@ export default function Skills() {
                 key={skill.name}
                 className="flex group  flex-col items-center justify-center min-w-[130px] bg-slate-800 p-4 rounded-md hover:bg-slate-700 transition-colors duration-300"
                 whileHover={{ scale: 1.2 }}
-                onMouseEnter={() => {
-                  setIsHoveredThis(true);
-                }}
-                onMouseLeave={() => setIsHoveredThis(false)}
               >
                 <motion.img
                   className={`w-16 h-16 object-contain opacity-40 transition-opacity duration-300 group-hover:opacity-100 group-hover:scale-110`}

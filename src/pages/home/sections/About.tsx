@@ -13,13 +13,9 @@ export default function About() {
       className="relative w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 px-6 md:px-10 overflow-hidden"
       id="about"
     >
-      <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
-
       <div className="relative flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto gap-10">
         <div className="w-full md:w-1/2 text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-3">
-            <FaNodeJs className="text-blue-400 text-3xl" />
             <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-300">
               About Me
             </h2>
