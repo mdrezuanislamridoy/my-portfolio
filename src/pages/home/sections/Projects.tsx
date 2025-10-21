@@ -8,24 +8,24 @@ const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB"],
     image: "/projects/mynexttrip.png",
     github: "https://github.com/yourusername/mynexttrip",
-    live: "https://mynexttrip.vercel.app",
+    live: "#",
   },
   {
     title: "RR-Commerce",
     description:
       "Full-featured e-commerce platform with product, review, and payment management using SSLCommerz.",
     tech: ["React", "TypeScript", "Express", "MongoDB"],
-    image: "/projects/rrcommerce.png",
-    github: "https://github.com/yourusername/rr-commerce",
-    live: "https://rrcommerce.vercel.app",
+    image: "/projects/ecobazar.png",
+    github: "https://github.com/ridoybabu781/TS_BAC/tree/main/RR-Commerce",
+    live: "#",
   },
   {
     title: "LMS Backend",
     description:
       "A TypeScript & Express-based Learning Management System with JWT authentication and media uploads.",
     tech: ["Node.js", "Express", "TypeScript", "MongoDB"],
-    image: "/projects/lms.png",
-    github: "https://github.com/yourusername/lms-backend",
+    image: "/projects/rrlms.png",
+    github: "https://github.com/mdrezuanislamridoy/LMS_BACKEND",
     live: "#",
   },
 ];
@@ -35,7 +35,7 @@ export default function FeaturedProjects() {
     <section className="w-full py-20 px-6 md:px-10 bg-gray-900 text-gray-100">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-white">
-          Featured <span className="text-green-400">Projects</span>
+          Featured <span className="text-blue-400">Projects</span>
         </h2>
         <p className="text-gray-400 mt-3 text-base">
           Here are some of my recent projects. Each one was built with a focus
@@ -47,7 +47,7 @@ export default function FeaturedProjects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800/60 rounded-2xl border border-gray-700 hover:border-green-400 transition p-4 shadow-lg flex flex-col"
+            className="bg-gray-800/60 rounded-2xl border border-gray-700 hover:border-blue-400 transition p-4 shadow-lg flex flex-col"
           >
             <div className="relative rounded-xl overflow-hidden h-48 mb-5">
               <img
@@ -75,13 +75,13 @@ export default function FeaturedProjects() {
               {project.description}
             </p>
 
-            <div className="flex justify-start gap-5 mt-5 text-green-400 text-lg">
+            <div className="flex justify-start gap-5 mt-5 text-blue-400 text-lg">
               {project.live && (
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-green-300 transition"
+                  className="hover:text-blue-300 transition"
                 >
                   <FaExternalLinkAlt />
                 </a>
@@ -90,7 +90,7 @@ export default function FeaturedProjects() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-green-300 transition"
+                className="hover:text-blue-300 transition"
               >
                 <FaGithub />
               </a>
@@ -101,10 +101,10 @@ export default function FeaturedProjects() {
 
       <div className="text-center mt-14">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/mdrezuanislamridoy"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-6 py-3 bg-green-500/10 border border-green-400 text-green-300 rounded-xl hover:bg-green-500/20 transition duration-300"
+          className="inline-block px-6 py-3 bg-blue-500/10 border border-blue-400 text-blue-300 rounded-xl hover:bg-blue-500/20 transition duration-300"
         >
           Check My Github →
         </a>

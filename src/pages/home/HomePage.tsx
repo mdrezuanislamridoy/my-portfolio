@@ -1,5 +1,6 @@
 import About from "./sections/About";
 import HeroSection from "./sections/HeroSection";
+import FeaturedProjects from "./sections/Projects";
 import Skills from "./sections/Skills";
 
 export default function HomePage() {
@@ -8,6 +9,7 @@ export default function HomePage() {
       <HeroSection />
       <About />
       <Skills />
+      <FeaturedProjects />
     </div>
   );
 }
