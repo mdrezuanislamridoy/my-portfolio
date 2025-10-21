@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { BiPhone, BiLocationPlus } from "react-icons/bi";
 import emailjs from "emailjs-com";
@@ -12,12 +12,14 @@ export default function Contact() {
 
   const [isSending, setIsSending] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSending(true);
     emailjs

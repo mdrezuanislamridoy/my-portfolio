@@ -14,7 +14,7 @@ export default function CustomCursor() {
   });
 
   useEffect(() => {
-    const moveCursor = (e) => {
+    const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX - 10);
       cursorY.set(e.clientY - 10);
     };
