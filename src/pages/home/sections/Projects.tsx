@@ -81,7 +81,7 @@ export default function FeaturedProjects() {
             </p>
 
             <div className="flex justify-start gap-5 mt-5 text-blue-400 text-lg">
-              {project.live && (
+              {/* {project.live && (
                 <a
                   href={project.live}
                   target="_blank"
@@ -90,7 +90,7 @@ export default function FeaturedProjects() {
                 >
                   <FaExternalLinkAlt />
                 </a>
-              )}
+              )} */}
               <a
                 href={project.github}
                 target="_blank"
