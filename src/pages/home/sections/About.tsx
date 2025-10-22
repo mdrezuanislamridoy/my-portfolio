@@ -64,15 +64,15 @@ export default function About() {
           </a>
         </div>
 
-        <div className="relative w-full md:w-1/2 flex justify-center">
-          <div className="relative w-[280px] h-[350px] rounded-3xl overflow-hidden shadow-xl shadow-blue-900/30 bg-white/5 backdrop-blur-md border border-white/10">
+        <div className="relative w-full md:w-1/2 m-auto flex justify-center">
+          <div className="relative w-[280px] h-[350px] rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/80 backdrop-blur-md border ">
             <img
               src="/me.png"
               alt="MD Ridoy Babu"
               className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
             />
           </div>
-          <div className="absolute -bottom-4 -right-4 w-[280px] h-[350px] rounded-3xl bg-gradient-to-r from-blue-400/20 to-emerald-400/20 blur-xl -z-10"></div>
+          <div className="absolute -bottom-4 -right-4 w-[280px] h-[350px] rounded-3xl -z-10"></div>
         </div>
       </div>
     </section>
