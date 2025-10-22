@@ -6,7 +6,7 @@ import ParticlesBackground from "./components/ParticlesBackground";
 
 export default function App() {
   return (
-    <div className="relative text-white min-h-screen  overflow-hidden">
+    <div className="relative text-white min-h-screen cursor-none overflow-hidden">
       <div className="absolute inset-0 bg-[#0f172a] -z-20"></div>
       <ParticlesBackground />
       <CustomCursor />
