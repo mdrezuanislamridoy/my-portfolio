@@ -11,7 +11,7 @@ import {
 export default function About() {
   return (
     <section
-      className="relative w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 px-6 md:px-10 overflow-hidden"
+      className="relative w-full bg-gray-900/20 backdrop-blur-sm py-16 px-6 md:px-10 overflow-hidden"
       id="about"
     >
       <div className="relative flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto gap-10">

@@ -75,7 +75,7 @@ export default function Contact() {
       <hr className="border-blue-400 border-2 w-26 my-2 rounded-3xl mx-auto mb-12" />
 
       <div className="flex flex-col md:flex-row gap-10">
-        <div className="w-full md:w-1/2 bg-gray-900/50 p-8 rounded-2xl shadow-md border border-blue-900/30 backdrop-blur-sm">
+        <div className="w-full md:w-1/2 bg-gray-900/30 p-8 rounded-2xl shadow-md border border-blue-900/30 backdrop-blur-sm">
           <h3 className="text-2xl font-semibold text-blue-400 mb-6">
             Contact Information
           </h3>
@@ -93,7 +93,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 bg-gray-900/50 p-8 rounded-2xl shadow-md border border-blue-900/30 backdrop-blur-sm">
+        <div className="w-full md:w-1/2 bg-gray-900/30 p-8 rounded-2xl shadow-md border border-blue-900/30 backdrop-blur-sm">
           <h3 className="text-2xl font-semibold text-blue-400 mb-6">
             Contact Form
           </h3>

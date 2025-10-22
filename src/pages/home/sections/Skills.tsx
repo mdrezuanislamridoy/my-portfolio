@@ -63,7 +63,7 @@ export default function Skills() {
             {skills.map((skill) => (
               <motion.div
                 key={skill.name}
-                className="flex group  flex-col items-center justify-center min-w-[130px] bg-slate-800 p-4 rounded-md hover:bg-slate-700 transition-colors duration-300"
+                className="flex group  flex-col items-center justify-center min-w-[130px] bg-slate-800/40 backdrop-blur-lg p-4 rounded-md hover:bg-slate-700/40 transition-colors duration-300"
                 whileHover={{ scale: 1.2 }}
               >
                 <motion.img
