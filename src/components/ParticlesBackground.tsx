@@ -28,7 +28,7 @@ const ParticlesBackground = () => {
         },
       },
       particles: {
-        number: { value: 200, density: { enable: true, area: 800 } },
+        number: { value: 170, density: { enable: true, area: 800 } },
         color: { value: "#60a5fa" },
         links: {
           enable: true,
