@@ -7,6 +7,7 @@ import {
   SiPostgresql,
   SiTypescript,
 } from "react-icons/si";
+import ButtonComponent from "../../../components/ui/ButtonComponent";
 
 export default function About() {
   return (
@@ -56,12 +57,9 @@ export default function About() {
             <SiTypescript title="TypeScript" />
           </div>
 
-          <a
-            href="#projects"
-            className="inline-block mt-8 px-5 py-2.5 bg-blue-500/10 text-blue-300 border border-blue-400 rounded-xl hover:bg-blue-500/20 transition duration-300 cursor-none"
-          >
+          <ButtonComponent link={"#projects"}>
             View My Projects →
-          </a>
+          </ButtonComponent>
         </div>
 
         <div className="relative w-full md:w-1/2 m-auto flex justify-center">

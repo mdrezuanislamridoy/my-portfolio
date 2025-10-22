@@ -1,4 +1,5 @@
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import ButtonComponent from "../../../components/ui/ButtonComponent";
 
 const projects = [
   {
@@ -105,14 +106,12 @@ export default function FeaturedProjects() {
       </div>
 
       <div className="text-center mt-14">
-        <a
-          href="https://github.com/mdrezuanislamridoy"
+        <ButtonComponent
+          link="https://github.com/mdrezuanislamridoy"
           target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-6 py-3 cursor-none bg-blue-500/10 border border-blue-400 text-blue-300 rounded-xl hover:bg-blue-500/20 transition duration-300"
         >
           Check My Github →
-        </a>
+        </ButtonComponent>
       </div>
     </section>
   );
