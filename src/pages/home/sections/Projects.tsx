@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "LMS Backend",
+    description:
+      "A TypeScript & Express-based Learning Management System with JWT authentication and media uploads.",
+    tech: ["Node.js", "Express", "TypeScript", "MongoDB"],
+    image: "/projects/rrlms.png",
+    github: "https://github.com/mdrezuanislamridoy/LMS_BACKEND",
+    live: "#",
+  },
+  {
     title: "MyNextTrip",
     description:
       "A travel web app with user, agency, and admin panels featuring authentication, booking, and chat system.",
@@ -18,15 +27,6 @@ const projects = [
     tech: ["React", "TypeScript", "Express", "MongoDB"],
     image: "/projects/ecobazar.png",
     github: "https://github.com/ridoybabu781/TS_BAC/tree/main/RR-Commerce",
-    live: "#",
-  },
-  {
-    title: "LMS Backend",
-    description:
-      "A TypeScript & Express-based Learning Management System with JWT authentication and media uploads.",
-    tech: ["Node.js", "Express", "TypeScript", "MongoDB"],
-    image: "/projects/rrlms.png",
-    github: "https://github.com/mdrezuanislamridoy/LMS_BACKEND",
     live: "#",
   },
 ];

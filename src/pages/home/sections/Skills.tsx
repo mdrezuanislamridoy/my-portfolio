@@ -20,7 +20,7 @@ export default function Skills() {
   const xPercent = useTransform(x, (val) => `${val}%`);
   const [isHovered, setIsHovered] = useState(false);
 
-  const speed = 20; // seconds for one loop
+  const speed = 10;
 
   useEffect(() => {
     let animation: any;
