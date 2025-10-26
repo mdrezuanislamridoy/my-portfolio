@@ -1,4 +1,4 @@
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -15,16 +15,17 @@ const projects = [
     title: "MyNextTrip",
     description:
       "A travel web app with user, agency, and admin panels featuring authentication, booking, and chat system.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
+    tech: ["JavaScript", "Node.js", "Express", "MongoDB"],
     image: "/projects/mynexttrip.png",
-    github: "https://github.com/mdrezuanislamridoy/MyNextTrip",
+    github:
+      "https://github.com/mdrezuanislamridoy/MyNextTrip/tree/master/server",
     live: "#",
   },
   {
     title: "RR-Commerce",
     description:
       "Full-featured e-commerce platform with product, review, and payment management using SSLCommerz.",
-    tech: ["React", "TypeScript", "Express", "MongoDB"],
+    tech: ["TypeScript", "Express", "MongoDB"],
     image: "/projects/ecobazar.png",
     github: "https://github.com/ridoybabu781/TS_BAC/tree/main/RR-Commerce",
     live: "#",
@@ -85,7 +86,7 @@ export default function FeaturedProjects() {
               />
 
               <div className="absolute inset-0 flex items-center justify-center gap-6 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {project.live && (
+                {/* {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
@@ -94,7 +95,7 @@ export default function FeaturedProjects() {
                   >
                     <FaExternalLinkAlt />
                   </a>
-                )}
+                )} */}
                 <a
                   href={project.github}
                   target="_blank"

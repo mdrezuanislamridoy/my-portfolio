@@ -110,14 +110,14 @@ export default function About() {
           variants={itemVariants}
         >
           <motion.div
-            className="relative w-[280px] h-[350px] rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/80 backdrop-blur-md border"
+            className="relative w-[280px] h-[350px] rounded-3xl   backdrop-blur-md "
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5 }}
           >
             <img
               src="/me.png"
               alt="MD Ridoy Babu"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full filter drop-shadow-[0_0_25px_#14b8a6]  transition-all hover:drop-shadow-[0_0_35px_#14b8a6]"
             />
           </motion.div>
           <div className="absolute -bottom-4 -right-4 w-[280px] h-[350px] rounded-3xl -z-10"></div>

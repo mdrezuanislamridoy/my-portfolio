@@ -95,7 +95,6 @@ const coder = {
             builds fast, scalable apps 🚀
           </motion.h3>
 
-          {/* Typed.js Animation */}
           <p className="text-cyan-400 text-lg mt-4">
             <span className="font-semibold">Expert in: </span>
             <span ref={typedRef} className="typed-text"></span>
@@ -108,7 +107,6 @@ const coder = {
           craft elegant code.
         </p>
 
-        {/* Social Icons */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -134,12 +132,12 @@ const coder = {
           className="mt-6 cursor-none inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-transform duration-300"
           href="Resume.pdf"
           target="_blank"
+          download
         >
           Download Resume <BiDownload className="text-xl" />
         </motion.a>
       </motion.div>
 
-      {/* RIGHT SECTION (CODE BOX) */}
       <motion.div
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
