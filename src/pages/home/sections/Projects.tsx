@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -27,8 +27,8 @@ const projects = [
       "Full-featured e-commerce platform with product, review, and payment management using SSLCommerz.",
     tech: ["TypeScript", "Express", "MongoDB"],
     image: "/projects/ecobazar.png",
-    github: "https://github.com/ridoybabu781/TS_BAC/tree/main/RR-Commerce",
-    live: "#",
+    github: "https://github.com/ridoybabu781/BAC_Learning/tree/main/E-Commerce",
+    live: "https://eco-bazar-liart.vercel.app/",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function FeaturedProjects() {
               />
 
               <div className="absolute inset-0 flex items-center justify-center gap-6 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {/* {project.live && (
+                {project.live !== "#" && project.live && (
                   <a
                     href={project.live}
                     target="_blank"
@@ -95,7 +95,7 @@ export default function FeaturedProjects() {
                   >
                     <FaExternalLinkAlt />
                   </a>
-                )} */}
+                )}
                 <a
                   href={project.github}
                   target="_blank"
