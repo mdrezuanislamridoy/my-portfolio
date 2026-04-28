@@ -31,7 +31,7 @@ export default function HeroSection() {
     Prism.highlightAll();
 
     const typed = new Typed(typedRef.current, {
-      strings: ["TypeScript", "React.js", "Node.js", "MongoDB", "Express.js"],
+      strings: ["TypeScript", "React.js", "Node.js", "Express.js", "MongoDB", "NestJS", "Prisma", "PostgreSQL", "Docker"],
       typeSpeed: 70,
       backSpeed: 40,
       backDelay: 1200,
@@ -45,17 +45,13 @@ export default function HeroSection() {
 
   const code = `
 const coder = {
-  name: 'Md.Ridoy Babu',
-  skills: ["TypeScript","React","NodeJS","MongoDB","ExpressJS"],
-  hardWorker: true,
-  quickLearner: true,
+  name: 'Md. Ridoy Babu',
+  skills: ["TypeScript","NestJS","Prisma","PostgreSQL","Docker"],
+  backend: true,
+  fastLearner: true,
   problemSolver: true,
   hireable: function() {
-    return (
-      this.hardWorker &&
-      this.problemSolver &&
-      this.skills.length >= 5
-    );
+    return this.backend && this.skills.length >= 5;
   }
 };
 `;

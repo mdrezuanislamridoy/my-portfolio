@@ -1,6 +1,6 @@
 import { FaNodeJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa6";
-import { SiExpress, SiMongodb, SiTypescript } from "react-icons/si";
+import { SiExpress, SiTypescript, SiNestjs, SiPostgresql, SiDocker } from "react-icons/si";
 import { motion, useAnimation, type Variants } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
@@ -67,24 +67,7 @@ export default function About() {
             className="text-gray-400 mt-3 text-sm md:text-base"
             variants={itemVariants}
           >
-            I'm working with the{" "}
-            <span className="text-blue-400 font-semibold">MERN stack</span> and
-            focused on{" "}
-            <span className="text-blue-400 font-semibold">
-              backend development
-            </span>
-            . I'm skilled in{" "}
-            <span className="text-blue-300 font-semibold">Node.js</span>,{" "}
-            <span className="text-blue-300 font-semibold">Express</span>,{" "}
-            <span className="text-blue-300 font-semibold">TypeScript</span>,{" "}
-            <span className="text-blue-300 font-semibold">MongoDB</span>, and
-            more. Exploring technologies like{" "}
-            <span className="text-blue-300 font-semibold">NestJS</span>,{" "}
-            <span className="text-blue-300 font-semibold">PostgreSQL</span>,{" "}
-            <span className="text-blue-300 font-semibold">Socket.io</span>, and
-            frontend with{" "}
-            <span className="text-blue-300 font-semibold">React.js</span> &{" "}
-            <span className="text-blue-300 font-semibold">Zustand</span>.
+            I build scalable backend systems with <span className="text-blue-400 font-semibold">NestJS</span>, <span className="text-blue-400 font-semibold">Prisma</span>, and <span className="text-blue-400 font-semibold">PostgreSQL</span>. I also containerize apps with <span className="text-blue-400 font-semibold">Docker</span>, while using <span className="text-blue-300 font-semibold">Node.js</span>, <span className="text-blue-300 font-semibold">Express</span>, <span className="text-blue-300 font-semibold">MongoDB</span>, and <span className="text-blue-300 font-semibold">TypeScript</span> for efficient, reliable development.
           </motion.p>
 
           <motion.div
@@ -94,7 +77,9 @@ export default function About() {
             <FaReact title="React" />
             <FaNodeJs title="Node.js" />
             <SiExpress title="Express.js" />
-            <SiMongodb title="MongoDB" />
+            <SiNestjs title="NestJS" />
+            <SiPostgresql title="PostgreSQL" />
+            <SiDocker title="Docker" />
             <SiTypescript title="TypeScript" />
           </motion.div>
 
@@ -116,7 +101,7 @@ export default function About() {
           >
             <img
               src="/me.png"
-              alt="MD Ridoy Babu"
+              alt="Developer Avatar"
               className="object-cover w-full h-full filter drop-shadow-[0_0_25px_#14b8a6]  transition-all hover:drop-shadow-[0_0_35px_#14b8a6]"
             />
           </motion.div>

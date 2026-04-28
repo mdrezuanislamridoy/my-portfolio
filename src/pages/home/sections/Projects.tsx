@@ -1,34 +1,102 @@
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const projects = [
+  
   {
-    title: "LMS Backend",
+    title: "RR-Vault",
     description:
-      "A TypeScript & Express-based Learning Management System with JWT authentication and media uploads.",
-    tech: ["Node.js", "Express", "TypeScript", "MongoDB"],
+      "A secure cloud storage platform for teams with NestJS backend, a React frontend, and an SDK for developer integration.",
+    tech: ["NestJS", "PostgreSQL", "TypeScript", "React", "Docker"],
+    image: "/projects/rr-vault.png",
+    links: [
+      {
+        label: "Frontend",
+        href: "https://github.com/mdrezuanislamridoy/my_cloud_client",
+      },
+      {
+        label: "Backend",
+        href: "https://github.com/mdrezuanislamridoy/RR-Vault",
+      },
+      {
+        label: "SDK",
+        href: "https://github.com/mdrezuanislamridoy/rr-vault-sdk",
+      },
+    ],
+    live: "https://rr-vault.vercel.app/",
+  },
+  {
+    title: "Sopnil Saaj",
+    description:
+      "A retail ordering platform with NestJS backend, Prisma data modeling, PostgreSQL storage, and a responsive frontend experience.",
+    tech: ["NestJS", "Prisma", "PostgreSQL", "TypeScript", "React", "Docker"],
+    image: "/projects/sopnil-saaj.png",
+    links: [
+      {
+        label: "Frontend",
+        href: "https://github.com/mdrezuanislamridoy/sopnil-saaj-frontend",
+      },
+      {
+        label: "Backend",
+        href: "https://github.com/mdrezuanislamridoy/sopnil-saaj-backend",
+      },
+    ],
+    live: "https://sopnilsaaj.vercel.app/",
+  },
+  {
+    title: "YourTutor",
+    description:
+      "A Learning Management System with frontend and backend, featuring JWT authentication, media uploads, and user management.",
+    tech: ["Node.js", "Express", "TypeScript", "MongoDB", "React"],
     image: "/projects/rrlms.png",
-    github: "https://github.com/mdrezuanislamridoy/LMS_BACKEND",
-    live: "#",
+    links: [
+      {
+        label: "Frontend",
+        href: "https://github.com/mdrezuanislamridoy/YourTutor-Frontend",
+      },
+      {
+        label: "Backend",
+        href: "https://github.com/mdrezuanislamridoy/LMS_BACKEND",
+      },
+    ],
+    live: "https://your-tutor-theta.vercel.app/",
+  },
+
+  {
+    title: "EcoBazar",
+    description:
+      "A modern e-commerce platform with a sleek React frontend, featuring product management, shopping cart, and secure checkout functionality.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
+    image: "/projects/ecobazar.png",
+    links: [
+      {
+        label: "Frontend",
+        href: "https://github.com/mdrezuanislamridoy/ecobazar-frontend",
+      },
+      {
+        label: "Backend",
+        href: "https://github.com/mdrezuanislamridoy/ecobazar-backend",
+      },
+    ],
+    live: "https://ecobazar.vercel.app/",
   },
   {
     title: "MyNextTrip",
     description:
-      "A travel web app with user, agency, and admin panels featuring authentication, booking, and chat system.",
-    tech: ["JavaScript", "Node.js", "Express", "MongoDB"],
+      "A travel planning application that helps users discover destinations, plan itineraries, and organize their trips efficiently.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
     image: "/projects/mynexttrip.png",
-    github:
-      "https://github.com/mdrezuanislamridoy/MyNextTrip/tree/master/server",
-    live: "#",
-  },
-  {
-    title: "RR-Commerce",
-    description:
-      "Full-featured e-commerce platform with product, review, and payment management using SSLCommerz.",
-    tech: ["TypeScript", "Express", "MongoDB"],
-    image: "/projects/ecobazar.png",
-    github: "https://github.com/ridoybabu781/BAC_Learning/tree/main/E-Commerce",
-    live: "https://eco-bazar-liart.vercel.app/",
+    links: [
+      {
+        label: "Frontend",
+        href: "https://github.com/mdrezuanislamridoy/mynexttrip-frontend",
+      },
+      {
+        label: "Backend",
+        href: "https://github.com/mdrezuanislamridoy/mynexttrip-backend",
+      },
+    ],
+    live: "https://mynexttrip.vercel.app/",
   },
 ];
 
@@ -85,25 +153,31 @@ export default function FeaturedProjects() {
                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 flex items-center justify-center gap-6 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {project.live !== "#" && project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white text-2xl hover:text-blue-400 transition-colors"
-                  >
-                    <FaExternalLinkAlt />
-                  </a>
-                )}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white text-2xl hover:text-blue-400 transition-colors"
-                >
-                  <FaGithub />
-                </a>
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-4">
+                <div className="flex flex-wrap justify-center gap-3">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-white/10 text-white text-xs rounded-full hover:bg-blue-500 transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                  {project.live !== "#" && project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-white/10 text-white text-xs rounded-full hover:bg-blue-500 transition-colors flex items-center gap-2"
+                    >
+                      Live
+                      <FaExternalLinkAlt />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
 
