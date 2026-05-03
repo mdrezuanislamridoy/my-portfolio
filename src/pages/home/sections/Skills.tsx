@@ -10,7 +10,9 @@ const skills = [
   { name: "NodeJS", image: "/skills/nodejs.png" },
   { name: "ExpressJS", image: "/skills/expressjs.png" },
   { name: "MongoDB", image: "/skills/mongodb.png" },
+  { name: "NestJS", image: "/skills/nestjs.png" },
   { name: "PostgreSQL", image: "/skills/postgresql.png" },
+  { name: "Docker", image: "/skills/docker.webp" },
   { name: "Git", image: "/skills/git.png" },
   { name: "TailwindCSS", image: "/skills/tailwindcss.png" },
 ];
