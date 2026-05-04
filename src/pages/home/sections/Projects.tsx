@@ -62,42 +62,42 @@ const projects = [
     live: "https://your-tutor-theta.vercel.app/",
   },
 
-  {
-    title: "EcoBazar",
-    description:
-      "A modern e-commerce platform with a sleek React frontend, featuring product management, shopping cart, and secure checkout functionality.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
-    image: "/projects/ecobazar.png",
-    links: [
-      {
-        label: "Frontend",
-        href: "https://github.com/mdrezuanislamridoy/ecobazar-frontend",
-      },
-      {
-        label: "Backend",
-        href: "https://github.com/mdrezuanislamridoy/ecobazar-backend",
-      },
-    ],
-    live: "https://ecobazar.vercel.app/",
-  },
-  {
-    title: "MyNextTrip",
-    description:
-      "A travel planning application that helps users discover destinations, plan itineraries, and organize their trips efficiently.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
-    image: "/projects/mynexttrip.png",
-    links: [
-      {
-        label: "Frontend",
-        href: "https://github.com/mdrezuanislamridoy/mynexttrip-frontend",
-      },
-      {
-        label: "Backend",
-        href: "https://github.com/mdrezuanislamridoy/mynexttrip-backend",
-      },
-    ],
-    live: "https://mynexttrip.vercel.app/",
-  },
+  // {
+  //   title: "EcoBazar",
+  //   description:
+  //     "A modern e-commerce platform with a sleek React frontend, featuring product management, shopping cart, and secure checkout functionality.",
+  //   tech: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
+  //   image: "/projects/ecobazar.png",
+  //   links: [
+  //     {
+  //       label: "Frontend",
+  //       href: "https://github.com/mdrezuanislamridoy/ecobazar-frontend",
+  //     },
+  //     {
+  //       label: "Backend",
+  //       href: "https://github.com/mdrezuanislamridoy/ecobazar-backend",
+  //     },
+  //   ],
+  //   live: "https://ecobazar.vercel.app/",
+  // },
+  // {
+  //   title: "MyNextTrip",
+  //   description:
+  //     "A travel planning application that helps users discover destinations, plan itineraries, and organize their trips efficiently.",
+  //   tech: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
+  //   image: "/projects/mynexttrip.png",
+  //   links: [
+  //     {
+  //       label: "Frontend",
+  //       href: "https://github.com/mdrezuanislamridoy/mynexttrip-frontend",
+  //     },
+  //     {
+  //       label: "Backend",
+  //       href: "https://github.com/mdrezuanislamridoy/mynexttrip-backend",
+  //     },
+  //   ],
+  //   live: "https://mynexttrip.vercel.app/",
+  // },
 ];
 
 const containerVariants = {
