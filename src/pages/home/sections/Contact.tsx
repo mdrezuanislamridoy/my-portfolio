@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { BiPhone, BiLocationPlus } from "react-icons/bi";
+import { FaRocket } from "react-icons/fa";
+import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
@@ -66,36 +68,107 @@ export default function Contact() {
 
   return (
     <div
-      className="w-full max-w-7xl mx-auto py-20 px-6 md:px-10  text-gray-100"
+      className="w-full max-w-7xl mx-auto py-20 px-6 md:px-10 text-gray-100"
       id="contact"
     >
-      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 ">
-        Get In Touch
-      </h2>
-      <hr className="border-blue-400 border-2 w-26 my-2 rounded-3xl mx-auto mb-12" />
+      {/* CTA Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="relative mb-16 overflow-hidden rounded-2xl"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-cyan-600/20 to-emerald-600/20" />
+        <div className="relative bg-slate-800/40 backdrop-blur-xl border border-slate-700/30 rounded-2xl p-8 md:p-12 text-center">
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, type: "spring" }}
+            className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
+          >
+            <FaRocket className="text-white text-2xl" />
+          </motion.div>
+          <h3 className="text-2xl md:text-4xl font-bold text-white mb-3">
+            Let's Build Something{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              Amazing Together
+            </span>
+          </h3>
+          <p className="text-slate-400 max-w-xl mx-auto mb-6">
+            Have a project in mind? Looking for a dedicated backend developer? 
+            I'm currently available for new opportunities and exciting collaborations.
+          </p>
+          <div className="flex items-center justify-center gap-2">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+            </span>
+            <span className="text-emerald-400 text-sm font-medium">Currently available for hire</span>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Section Title */}
+      <div className="text-center mb-12">
+        <motion.p
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-blue-400 font-semibold uppercase tracking-widest text-sm mb-3"
+        >
+          Reach Out
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300"
+        >
+          Get In Touch
+        </motion.h2>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: 80 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mx-auto mt-4"
+        />
+      </div>
 
       <div className="flex flex-col md:flex-row gap-10">
-        <div className="w-full md:w-1/2 bg-gray-900/30 p-8 rounded-2xl shadow-md border border-blue-900/30 backdrop-blur-sm">
+        <div className="w-full md:w-1/2 bg-slate-800/40 backdrop-blur-xl p-8 rounded-2xl shadow-md border border-slate-700/30">
           <h3 className="text-2xl font-semibold text-blue-400 mb-6">
             Contact Information
           </h3>
 
           <div className="space-y-6">
             {contactInfo.map((item) => (
-              <div key={item.id} className="flex items-start gap-4">
-                {item.icon}
+              <div key={item.id} className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+                  {item.icon}
+                </div>
                 <div>
                   <p className="font-semibold text-gray-200">{item.title}</p>
-                  <span className="text-gray-400">{item.value}</span>
+                  <span className="text-gray-400 text-sm">{item.value}</span>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Map or extra info */}
+          <div className="mt-8 p-5 bg-slate-900/40 rounded-xl border border-slate-700/30">
+            <p className="text-slate-300 text-sm font-medium mb-2">⏰ Response Time</p>
+            <p className="text-slate-400 text-sm">
+              I typically respond within <span className="text-blue-400 font-medium">24 hours</span>. 
+              For urgent inquiries, feel free to call directly.
+            </p>
+          </div>
         </div>
 
-        <div className="w-full md:w-1/2 bg-gray-900/30 p-8 rounded-2xl shadow-md border border-blue-900/30 backdrop-blur-sm">
+        <div className="w-full md:w-1/2 bg-slate-800/40 backdrop-blur-xl p-8 rounded-2xl shadow-md border border-slate-700/30">
           <h3 className="text-2xl font-semibold text-blue-400 mb-6">
-            Contact Form
+            Send a Message
           </h3>
 
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -111,8 +184,8 @@ export default function Contact() {
                 id="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Enter your name"
-                className="w-full p-3 rounded-lg bg-gray-900/70 border border-blue-900/40 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
+                placeholder="Your name"
+                className="w-full p-3 rounded-xl bg-slate-900/70 border border-slate-700/40 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all placeholder:text-slate-600"
                 required
               />
             </div>
@@ -129,8 +202,8 @@ export default function Contact() {
                 id="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Enter your email"
-                className="w-full p-3 rounded-lg bg-gray-900/70 border border-blue-900/40 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
+                placeholder="your@email.com"
+                className="w-full p-3 rounded-xl bg-slate-900/70 border border-slate-700/40 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all placeholder:text-slate-600"
                 required
               />
             </div>
@@ -146,27 +219,27 @@ export default function Contact() {
                 id="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Write your message..."
+                placeholder="Tell me about your project..."
                 rows={5}
-                className="w-full p-3 rounded-lg bg-gray-900/70 border border-blue-900/40 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all resize-none"
+                className="w-full p-3 rounded-xl bg-slate-900/70 border border-slate-700/40 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all resize-none placeholder:text-slate-600"
                 required
               />
             </div>
 
             <button
               type="submit"
-              className={`cursor-none w-full bg-blue-500/20 text-blue-300 border border-blue-500 rounded-lg py-3 font-semibold hover:bg-blue-500/30 hover:text-white transition-all ${
-                isSending ? "cursor-not-allowed" : ""
+              disabled={isSending}
+              className={`cursor-none w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl py-3.5 font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all ${
+                isSending ? "opacity-60 cursor-not-allowed" : ""
               }`}
             >
               {isSending ? (
-                <div role="status flex justify-center items-center">
+                <div className="flex justify-center items-center">
                   <svg
                     aria-hidden="true"
-                    className="w-4 h-4 text-gray-200 animate-spin dark:text-gray-600 fill-blue-300 inline-block"
+                    className="w-4 h-4 text-gray-200 animate-spin fill-white inline-block"
                     viewBox="0 0 100 101"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -180,7 +253,7 @@ export default function Contact() {
                   <span className="ml-2">Sending...</span>
                 </div>
               ) : (
-                "Send Message"
+                "Send Message 🚀"
               )}
             </button>
           </form>
