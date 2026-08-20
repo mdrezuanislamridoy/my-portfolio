@@ -2,19 +2,20 @@ import { motion, animate, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const skills = [
+  { name: "NestJS", image: "/skills/nestjs.png" },
+  { name: "TypeScript", image: "/skills/typescript.png" },
+  { name: "PostgreSQL", image: "/skills/postgresql.png" },
+  { name: "React", image: "/skills/react.png" },
+  { name: "NextJS", image: "/skills/nextjs.png" },
+  { name: "NodeJS", image: "/skills/nodejs.png" },
+  { name: "Docker", image: "/skills/docker.webp" },
+  { name: "MongoDB", image: "/skills/mongodb.png" },
+  { name: "ExpressJS", image: "/skills/expressjs.png" },
+  { name: "JavaScript", image: "/skills/javascript.png" },
+  { name: "TailwindCSS", image: "/skills/tailwindcss.png" },
+  { name: "Git", image: "/skills/git.png" },
   { name: "HTML", image: "/skills/html.png" },
   { name: "CSS", image: "/skills/css.png" },
-  { name: "JavaScript", image: "/skills/javascript.png" },
-  { name: "TypeScript", image: "/skills/typescript.png" },
-  { name: "React", image: "/skills/react.png" },
-  { name: "NodeJS", image: "/skills/nodejs.png" },
-  { name: "ExpressJS", image: "/skills/expressjs.png" },
-  { name: "MongoDB", image: "/skills/mongodb.png" },
-  { name: "NestJS", image: "/skills/nestjs.png" },
-  { name: "PostgreSQL", image: "/skills/postgresql.png" },
-  { name: "Docker", image: "/skills/docker.webp" },
-  { name: "Git", image: "/skills/git.png" },
-  { name: "TailwindCSS", image: "/skills/tailwindcss.png" },
 ];
 
 export default function Skills() {

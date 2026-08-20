@@ -2,9 +2,29 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const projects = [
-  
   {
-    title: "RR-Vault",
+    title: "MedCare - Telemedicine Microservices",
+    description:
+      "Database-per-Service microservices system with 11 isolated services, 9 PostgreSQL DBs, NestJS/Caddy API Gateway, live token-queue SSE, and WebSocket teleconsultation.",
+    tech: ["NestJS", "TypeScript", "PostgreSQL", "Prisma 7", "Redis", "Docker", "WebSockets", "Jest"],
+    image: "/projects/medcare.png",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/mdrezuanislamridoy/MedCare-Backend",
+      },
+    ],
+    live: "",
+  },
+  {
+    title: "Nodmac - EdTech & Career SaaS",
+    description:
+      "EdTech SaaS with AI-powered hybrid chatbot fallback, MCQ engine, multi-tier Stripe/Selcom subscription engine with monthly usage throttling, and dynamic CV builder.",
+    tech: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Stripe/Selcom", "Socket.io", "AWS S3"],
+    image: "/projects/nodmac.png",
+  },
+  {
+    title: "RR-Vault - Cloud Storage & SDK",
     description:
       "A secure cloud storage platform for teams with NestJS backend, a React frontend, and an SDK for developer integration.",
     tech: ["NestJS", "PostgreSQL", "TypeScript", "React", "Docker"],
@@ -26,24 +46,6 @@ const projects = [
     live: "https://rr-vault.vercel.app/",
   },
   {
-    title: "Sopnil Saaj",
-    description:
-      "A retail ordering platform with NestJS backend, Prisma data modeling, PostgreSQL storage, and a responsive frontend experience.",
-    tech: ["NestJS", "Prisma", "PostgreSQL", "TypeScript", "React", "Docker"],
-    image: "/projects/sopnil-saaj.png",
-    links: [
-      {
-        label: "Frontend",
-        href: "https://github.com/mdrezuanislamridoy/sopnil-saaj-frontend",
-      },
-      {
-        label: "Backend",
-        href: "https://github.com/mdrezuanislamridoy/sopnil-saaj-backend",
-      },
-    ],
-    live: "https://sopnilsaaj.vercel.app/",
-  },
-  {
     title: "YourTutor",
     description:
       "A Learning Management System with frontend and backend, featuring JWT authentication, media uploads, and user management.",
@@ -61,42 +63,41 @@ const projects = [
     ],
     live: "https://your-tutor-theta.vercel.app/",
   },
-
   // {
-  //   title: "EcoBazar",
+  //   title: "Sopnil Saaj - Retail Platform",
   //   description:
-  //     "A modern e-commerce platform with a sleek React frontend, featuring product management, shopping cart, and secure checkout functionality.",
-  //   tech: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
+  //     "A retail ordering platform with NestJS backend, Prisma data modeling, PostgreSQL storage, and a responsive frontend experience.",
+  //   tech: ["NestJS", "Prisma", "PostgreSQL", "TypeScript", "React", "Docker"],
+  //   image: "/projects/sopnil-saaj.png",
+  //   links: [
+  //     {
+  //       label: "Frontend",
+  //       href: "https://github.com/mdrezuanislamridoy/sopnil-saaj-frontend",
+  //     },
+  //     {
+  //       label: "Backend",
+  //       href: "https://github.com/mdrezuanislamridoy/sopnil-saaj-backend",
+  //     },
+  //   ],
+  //   live: "https://sopnilsaaj.vercel.app/",
+  // },
+  // {
+  //   title: "YourTutor - LMS Platform",
+  //   description:
+  //     "A Learning Management System with full-stack architecture, featuring JWT authentication, media uploads, and course management.",
+  //   tech: ["Node.js", "Express", "TypeScript", "MongoDB", "React"],
   //   image: "/projects/ecobazar.png",
   //   links: [
   //     {
   //       label: "Frontend",
-  //       href: "https://github.com/mdrezuanislamridoy/ecobazar-frontend",
+  //       href: "https://github.com/mdrezuanislamridoy/YourTutor-Frontend",
   //     },
   //     {
   //       label: "Backend",
-  //       href: "https://github.com/mdrezuanislamridoy/ecobazar-backend",
+  //       href: "https://github.com/mdrezuanislamridoy/LMS_BACKEND",
   //     },
   //   ],
-  //   live: "https://ecobazar.vercel.app/",
-  // },
-  // {
-  //   title: "MyNextTrip",
-  //   description:
-  //     "A travel planning application that helps users discover destinations, plan itineraries, and organize their trips efficiently.",
-  //   tech: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
-  //   image: "/projects/mynexttrip.png",
-  //   links: [
-  //     {
-  //       label: "Frontend",
-  //       href: "https://github.com/mdrezuanislamridoy/mynexttrip-frontend",
-  //     },
-  //     {
-  //       label: "Backend",
-  //       href: "https://github.com/mdrezuanislamridoy/mynexttrip-backend",
-  //     },
-  //   ],
-  //   live: "https://mynexttrip.vercel.app/",
+  //   live: "https://your-tutor-theta.vercel.app/",
   // },
 ];
 

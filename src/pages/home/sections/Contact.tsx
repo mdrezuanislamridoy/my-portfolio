@@ -50,7 +50,7 @@ export default function Contact() {
       id: 1,
       icon: <MdEmail className="text-blue-400 text-2xl mt-1" />,
       title: "Email",
-      value: "mdrezuanislamridoy@gmail.com",
+      value: "ridoy.babu.781@gmail.com",
     },
     {
       id: 2,

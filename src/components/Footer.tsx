@@ -22,7 +22,7 @@ const socials = [
   { icon: <FaGithub />, path: "https://github.com/mdrezuanislamridoy", label: "GitHub" },
   { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/rr-md-ridoy-babu/", label: "LinkedIn" },
   { icon: <FaFacebook />, path: "https://www.facebook.com/RidoyBabu.FutureDeveloper/", label: "Facebook" },
-  { icon: <MdEmail />, path: "mailto:mdrezuanislamridoy@gmail.com", label: "Email" },
+  { icon: <MdEmail />, path: "mailto:ridoy.babu.781@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -48,8 +48,8 @@ export default function Footer() {
               {"<RB />"}
             </h3>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Backend Architect & Full-Stack Developer crafting scalable, production-grade 
-              systems. Currently building at Betopia Limited.
+              Full Stack & Backend Developer crafting scalable, production-grade 
+              systems. Currently building at Softvence Agency.
             </p>
             <div className="flex gap-4">
               {socials.map((s) => (

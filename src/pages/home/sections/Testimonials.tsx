@@ -6,8 +6,8 @@ const testimonials = [
   {
     name: "Ahmed Rahman",
     role: "Project Manager",
-    company: "Betopia Limited",
-    text: "Ridoy is an exceptional backend developer. His ability to architect scalable APIs and manage complex database schemas is remarkable. He consistently delivers production-ready code ahead of deadlines.",
+    company: "Softvence Agency",
+    text: "Ridoy is an exceptional backend and full-stack developer. His ability to architect scalable APIs, microservices, and manage complex database schemas is remarkable. He consistently delivers production-ready code ahead of deadlines.",
     rating: 5,
     initials: "AR",
     color: "#3b82f6",

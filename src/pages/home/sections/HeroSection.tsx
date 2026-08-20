@@ -18,7 +18,7 @@ export default function HeroSection() {
     { icon: <GrGithub />, path: "https://github.com/mdrezuanislamridoy" },
     { icon: <LiaLinkedin />, path: "https://www.linkedin.com/in/rr-md-ridoy-babu/" },
     { icon: <FaFacebook />, path: "https://www.facebook.com/RidoyBabu.FutureDeveloper/" },
-    { icon: <MdEmail />, path: "mailto:mdrezuanislamridoy@gmail.com" },
+    { icon: <MdEmail />, path: "mailto:ridoy.babu.781@gmail.com" },
   ];
 
   useEffect(() => {
@@ -26,12 +26,12 @@ export default function HeroSection() {
 
     const typed = new Typed(typedRef.current, {
       strings: [
-        "NestJS & Prisma",
-        "PostgreSQL & MongoDB",
-        "Docker & DevOps",
-        "REST & GraphQL APIs",
-        "TypeScript Expert",
-        "System Architecture",
+        "NestJS & PostgreSQL",
+        "React.js & Next.js",
+        "Microservices & Kafka",
+        "TypeScript & Node.js",
+        "Prisma & Docker CI/CD",
+        "Scalable REST & gRPC",
       ],
       typeSpeed: 60,
       backSpeed: 35,
@@ -46,15 +46,16 @@ export default function HeroSection() {
 
   const code = `
 const engineer = {
-  name: 'Md. Ridoy Babu',
-  role: 'Backend Architect',
+  name: 'MD RIDOY BABU',
+  role: 'Full Stack & Backend Developer',
   experience: '1+ Years',
   stack: {
-    backend: ["NestJS", "Express", "Node.js"],
-    database: ["PostgreSQL", "MongoDB", "Prisma"],
-    devops: ["Docker", "CI/CD", "Linux"],
+    frontend: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+    backend: ["Node.js", "NestJS", "Express.js", "REST / gRPC"],
+    database: ["PostgreSQL", "Prisma", "TypeORM", "MongoDB", "Redis"],
+    devops: ["Docker", "CI/CD", "AWS", "Kafka", "Linux"],
   },
-  currentlyAt: 'Betopia Limited',
+  currentlyAt: 'Softvence Agency',
   openToWork: true,
   hireable() {
     return this.openToWork && 
@@ -110,7 +111,7 @@ const engineer = {
           >
             a{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Backend Architect
+              Full Stack & Backend Developer
             </span>{" "}
             who builds
             <br />
@@ -124,8 +125,8 @@ const engineer = {
         </div>
 
         <p className="text-slate-400 max-w-md text-base leading-relaxed">
-          1+ year of professional experience architecting production-grade backend systems 
-          at <span className="text-blue-400 font-medium">Betopia Limited</span>. 
+          Full Stack Developer with production experience designing scalable RESTful APIs, 
+          microservices, and responsive front-ends at <span className="text-blue-400 font-medium">Softvence Agency</span>. 
           I turn complex business logic into clean, maintainable, and scalable code.
         </p>
 
