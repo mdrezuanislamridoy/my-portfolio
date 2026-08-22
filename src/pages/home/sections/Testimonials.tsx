@@ -116,7 +116,7 @@ export default function Testimonials() {
                     </p>
                   </div>
                   <div className="flex gap-1">
-                    {Array.from({ length: testimonials[current].rating }).map((_, i) => (
+                    {Array.from({ length: testimonials[current]?.rating || 5 }).map((_, i) => (
                       <FaStar key={i} className="text-yellow-400 text-sm" />
                     ))}
                   </div>
@@ -134,7 +134,7 @@ export default function Testimonials() {
             <FaChevronLeft />
           </button>
           <div className="flex gap-2">
-            {testimonials.map((_, i) => (
+            {testimonials?.map((_, i) => (
               <button
                 key={i}
                 onClick={() => goTo(i)}

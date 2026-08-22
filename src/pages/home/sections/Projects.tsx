@@ -22,6 +22,13 @@ const projects = [
       "EdTech SaaS with AI-powered hybrid chatbot fallback, MCQ engine, multi-tier Stripe/Selcom subscription engine with monthly usage throttling, and dynamic CV builder.",
     tech: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Stripe/Selcom", "Socket.io", "AWS S3"],
     image: "/projects/nodmac.png",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/mdrezuanislamridoy",
+      },
+    ],
+    live: "",
   },
   {
     title: "RR-Vault - Cloud Storage & SDK",
@@ -63,42 +70,6 @@ const projects = [
     ],
     live: "https://your-tutor-theta.vercel.app/",
   },
-  // {
-  //   title: "Sopnil Saaj - Retail Platform",
-  //   description:
-  //     "A retail ordering platform with NestJS backend, Prisma data modeling, PostgreSQL storage, and a responsive frontend experience.",
-  //   tech: ["NestJS", "Prisma", "PostgreSQL", "TypeScript", "React", "Docker"],
-  //   image: "/projects/sopnil-saaj.png",
-  //   links: [
-  //     {
-  //       label: "Frontend",
-  //       href: "https://github.com/mdrezuanislamridoy/sopnil-saaj-frontend",
-  //     },
-  //     {
-  //       label: "Backend",
-  //       href: "https://github.com/mdrezuanislamridoy/sopnil-saaj-backend",
-  //     },
-  //   ],
-  //   live: "https://sopnilsaaj.vercel.app/",
-  // },
-  // {
-  //   title: "YourTutor - LMS Platform",
-  //   description:
-  //     "A Learning Management System with full-stack architecture, featuring JWT authentication, media uploads, and course management.",
-  //   tech: ["Node.js", "Express", "TypeScript", "MongoDB", "React"],
-  //   image: "/projects/ecobazar.png",
-  //   links: [
-  //     {
-  //       label: "Frontend",
-  //       href: "https://github.com/mdrezuanislamridoy/YourTutor-Frontend",
-  //     },
-  //     {
-  //       label: "Backend",
-  //       href: "https://github.com/mdrezuanislamridoy/LMS_BACKEND",
-  //     },
-  //   ],
-  //   live: "https://your-tutor-theta.vercel.app/",
-  // },
 ];
 
 const containerVariants = {
@@ -156,7 +127,7 @@ export default function FeaturedProjects() {
 
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-4">
                 <div className="flex flex-wrap justify-center gap-3">
-                  {project.links.map((link) => (
+                  {project.links?.map((link) => (
                     <a
                       key={link.label}
                       href={link.href}
@@ -183,7 +154,7 @@ export default function FeaturedProjects() {
             </div>
 
             <div className="flex flex-wrap gap-2 p-4">
-              {project.tech.map((tech, i) => (
+              {project.tech?.map((tech, i) => (
                 <span
                   key={i}
                   className="px-3 py-1 bg-gray-700 text-gray-200 text-xs rounded-full"
