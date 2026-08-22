@@ -22,12 +22,7 @@ const projects = [
       "EdTech SaaS with AI-powered hybrid chatbot fallback, MCQ engine, multi-tier Stripe/Selcom subscription engine with monthly usage throttling, and dynamic CV builder.",
     tech: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Stripe/Selcom", "Socket.io", "AWS S3"],
     image: "/projects/nodmac.png",
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/mdrezuanislamridoy",
-      },
-    ],
+
     live: "",
   },
   {
