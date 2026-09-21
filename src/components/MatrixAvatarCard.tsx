@@ -411,9 +411,6 @@ export default function MatrixAvatarCard({
 
   return (
     <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 xl:w-96 xl:h-96">
-      {/* Decorative neon purple floating ring */}
-      <div className="absolute -top-6 -left-6 sm:-top-8 sm:-left-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#7C3AED] shadow-[0_0_15px_rgba(124,58,237,0.5)] pointer-events-none z-30" />
-
       {/* Outer tilted glowing neon borders */}
       <div className="absolute -inset-4 border border-[#00f0ff]/30 rounded-2xl rotate-6 animate-pulse pointer-events-none transition-all duration-700" />
       <div className="absolute -inset-4 border border-[#7C3AED]/30 rounded-2xl -rotate-3 pointer-events-none transition-all duration-700" />
