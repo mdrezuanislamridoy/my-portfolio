@@ -1,7 +1,23 @@
 import { motion, animate, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
+import {
+  SiRedis,
+  SiPrisma,
+  SiTypeorm,
+  SiApachekafka,
+  SiAmazonwebservices,
+  SiGithubactions,
+  SiJest,
+  SiSocketdotio,
+  SiSwagger,
+  SiJsonwebtokens,
+  SiLinux,
+} from "react-icons/si";
 
-const skills = [
+type Skill = { name: string; image?: string; icon?: ReactNode; color?: string };
+
+const skills: Skill[] = [
   { name: "NestJS", image: "/skills/nestjs.png" },
   { name: "TypeScript", image: "/skills/typescript.png" },
   { name: "PostgreSQL", image: "/skills/postgresql.png" },
@@ -16,6 +32,17 @@ const skills = [
   { name: "Git", image: "/skills/git.png" },
   { name: "HTML", image: "/skills/html.png" },
   { name: "CSS", image: "/skills/css.png" },
+  { name: "Redis", icon: <SiRedis />, color: "#DC382D" },
+  { name: "Prisma", icon: <SiPrisma />, color: "#3982CE" },
+  { name: "TypeORM", icon: <SiTypeorm />, color: "#FE0803" },
+  { name: "Kafka", icon: <SiApachekafka />, color: "#ffffff" },
+  { name: "AWS", icon: <SiAmazonwebservices />, color: "#FF9900" },
+  { name: "CI/CD", icon: <SiGithubactions />, color: "#2088FF" },
+  { name: "Jest", icon: <SiJest />, color: "#C21325" },
+  { name: "Socket.io", icon: <SiSocketdotio />, color: "#ffffff" },
+  { name: "Swagger", icon: <SiSwagger />, color: "#85EA2D" },
+  { name: "JWT", icon: <SiJsonwebtokens />, color: "#ffffff" },
+  { name: "Linux", icon: <SiLinux />, color: "#FCC624" },
 ];
 
 export default function Skills() {
@@ -61,11 +88,20 @@ export default function Skills() {
             className="flex group flex-col items-center justify-center min-w-[130px] bg-slate-800/40 backdrop-blur-lg p-4 rounded-md hover:bg-slate-700/40 transition-colors duration-300"
             whileHover={{ scale: 1.2 }}
           >
-            <motion.img
-              className="w-16 h-16 object-contain opacity-40 transition-opacity duration-300 group-hover:opacity-100 group-hover:scale-110"
-              src={skill.image}
-              alt={skill.name}
-            />
+            {skill.image ? (
+              <motion.img
+                className="w-16 h-16 object-contain opacity-40 transition-opacity duration-300 group-hover:opacity-100 group-hover:scale-110"
+                src={skill.image}
+                alt={skill.name}
+              />
+            ) : (
+              <motion.span
+                className="w-16 h-16 flex items-center justify-center text-5xl opacity-40 transition-opacity duration-300 group-hover:opacity-100 group-hover:scale-110"
+                style={{ color: skill.color }}
+              >
+                {skill.icon}
+              </motion.span>
+            )}
             <span className="text-lg font-semibold pt-4">{skill.name}</span>
           </motion.div>
         ))}

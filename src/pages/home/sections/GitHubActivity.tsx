@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaCodeBranch, FaFire, FaExternalLinkAlt } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiNestjs, SiPostgresql } from "react-icons/si";
+import { SiTypescript, SiNestjs, SiPostgresql } from "react-icons/si";
 
 const stats = [
   { icon: <FaCodeBranch />, value: "30+", label: "Repositories" },
@@ -8,8 +8,8 @@ const stats = [
 ];
 
 const topLanguages = [
-  { name: "NestJS", icon: <SiTypescript />, color: "#3178c6", percent: 65 },
-  { name: "TypeScript", icon: <SiJavascript />, color: "#f7df1e", percent: 25 },
+  { name: "NestJS", icon: <SiNestjs />, color: "#E0234E", percent: 65 },
+  { name: "TypeScript", icon: <SiTypescript />, color: "#3178c6", percent: 25 },
   { name: "SQL", icon: <SiPostgresql />, color: "#336791", percent: 10 },
 ];
 

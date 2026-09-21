@@ -11,29 +11,6 @@ interface StatItemProps {
   color: string;
 }
 
-function AnimatedCounter({ value, suffix, inView }: { value: number; suffix: string; inView: boolean }) {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => Math.round(latest));
-
-  useEffect(() => {
-    if (inView) {
-      const controls = animate(count, value, {
-        duration: 2,
-        ease: "easeOut",
-      });
-      return controls.stop;
-    }
-  }, [inView, count, value]);
-
-  return (
-    <motion.span className="text-5xl md:text-6xl font-extrabold">
-      {useTransform(rounded, (v) => `${v}${suffix}`).get() ? (
-        <motion.span>{useTransform(rounded, (v) => `${v}${suffix}`)}</motion.span>
-      ) : null}
-    </motion.span>
-  );
-}
-
 function StatCard({ icon, value, suffix, label, delay, color }: StatItemProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
@@ -90,7 +67,7 @@ const stats = [
   { icon: <FaBriefcase />, value: 1, suffix: "+", label: "Years Experience", color: "#60a5fa" },
   { icon: <FaProjectDiagram />, value: 10, suffix: "+", label: "Projects Delivered", color: "#34d399" },
   { icon: <FaUsers />, value: 8, suffix: "+", label: "Happy Clients", color: "#a78bfa" },
-  { icon: <FaCode />, value: 14, suffix: "+", label: "Technologies", color: "#f472b6" },
+  { icon: <FaCode />, value: 25, suffix: "+", label: "Technologies", color: "#f472b6" },
 ];
 
 export default function Stats() {

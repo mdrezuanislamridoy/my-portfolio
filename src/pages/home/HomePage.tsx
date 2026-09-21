@@ -4,6 +4,7 @@ import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
 import GitHubActivity from "./sections/GitHubActivity";
 import HeroSection from "./sections/HeroSection";
+import OpenSource from "./sections/OpenSource";
 import FeaturedProjects from "./sections/Projects";
 import Services from "./sections/Services";
 import Skills from "./sections/Skills";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Stats />
       <About />
       <Experience />
+      <OpenSource />
       <Services />
       <Skills />
       <FeaturedProjects />
