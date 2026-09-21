@@ -76,7 +76,7 @@ export default function About() {
             variants={itemVariants}
           >
             I'm a <span className="text-blue-400 font-semibold">Full Stack Developer & Backend Specialist</span> with production experience at{" "}
-            <span className="text-cyan-400 font-semibold">Softvence Agency</span>. 
+            <span className="text-cyan-400 font-semibold">Softvence Agency</span>.
             I design and maintain scalable RESTful APIs, microservices, and responsive front-ends using{" "}
             <span className="text-blue-400 font-semibold">Node.js</span>,{" "}
             <span className="text-blue-400 font-semibold">NestJS</span>,{" "}
@@ -135,7 +135,7 @@ export default function About() {
           variants={itemVariants}
         >
           <MatrixAvatarCard
-            src="/me.png"
+            src="/me.jpg"
             alt="MD RIDOY BABU - Full Stack & Backend Developer"
             themeColor="#00f0ff"
             initialColorMode="theme"
