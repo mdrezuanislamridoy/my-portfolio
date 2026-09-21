@@ -85,7 +85,7 @@ export default function Testimonials() {
       </div>
 
       <div className="relative max-w-3xl mx-auto">
-        <div className="overflow-hidden relative min-h-[320px] md:min-h-[280px]">
+        <div className="overflow-hidden relative min-h-[360px] sm:min-h-[320px] md:min-h-[290px]">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={current}
@@ -94,30 +94,36 @@ export default function Testimonials() {
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="absolute inset-0"
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="w-full"
             >
-              <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 md:p-10 h-full">
-                <FaQuoteLeft className="text-blue-400/20 text-4xl mb-4" />
-                <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-8 italic">
-                  "{testimonials[current].text}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm"
-                    style={{ backgroundColor: testimonials[current].color }}
-                  >
-                    {testimonials[current].initials}
+              <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/60 rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl flex flex-col justify-between min-h-[310px] sm:min-h-[280px]">
+                <div>
+                  <FaQuoteLeft className="text-blue-400/25 text-3xl md:text-4xl mb-4" />
+                  <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6 italic">
+                    "{testimonials[current].text}"
+                  </p>
+                </div>
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-slate-700/50">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div
+                      className="w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0"
+                      style={{ backgroundColor: testimonials[current].color }}
+                    >
+                      {testimonials[current].initials}
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold text-sm sm:text-base md:text-lg">
+                        {testimonials[current].name}
+                      </h4>
+                      <p className="text-slate-400 text-xs sm:text-sm">
+                        {testimonials[current].role} · {testimonials[current].company}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h4 className="text-white font-semibold">{testimonials[current].name}</h4>
-                    <p className="text-slate-400 text-sm">
-                      {testimonials[current].role} · {testimonials[current].company}
-                    </p>
-                  </div>
-                  <div className="flex gap-1">
+                  <div className="flex gap-1 shrink-0">
                     {Array.from({ length: testimonials[current]?.rating || 5 }).map((_, i) => (
-                      <FaStar key={i} className="text-yellow-400 text-sm" />
+                      <FaStar key={i} className="text-yellow-400 text-xs sm:text-sm" />
                     ))}
                   </div>
                 </div>
@@ -129,7 +135,8 @@ export default function Testimonials() {
         <div className="flex items-center justify-center gap-6 mt-8">
           <button
             onClick={() => { setDirection(-1); setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length); }}
-            className="w-10 h-10 rounded-full border border-slate-600 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-400 transition-all duration-300 cursor-none"
+            className="w-10 h-10 rounded-full border border-slate-600/80 bg-slate-900/60 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-400 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-[0_0_10px_rgba(59,130,246,0.2)]"
+            aria-label="Previous testimonial"
           >
             <FaChevronLeft />
           </button>
@@ -138,15 +145,17 @@ export default function Testimonials() {
               <button
                 key={i}
                 onClick={() => goTo(i)}
-                className={`h-2.5 rounded-full transition-all duration-300 cursor-none ${
+                className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                   i === current ? "bg-blue-400 w-8" : "bg-slate-600 hover:bg-slate-500 w-2.5"
                 }`}
+                aria-label={`Go to testimonial ${i + 1}`}
               />
             ))}
           </div>
           <button
             onClick={() => { setDirection(1); setCurrent((c) => (c + 1) % testimonials.length); }}
-            className="w-10 h-10 rounded-full border border-slate-600 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-400 transition-all duration-300 cursor-none"
+            className="w-10 h-10 rounded-full border border-slate-600/80 bg-slate-900/60 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-400 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-[0_0_10px_rgba(59,130,246,0.2)]"
+            aria-label="Next testimonial"
           >
             <FaChevronRight />
           </button>
