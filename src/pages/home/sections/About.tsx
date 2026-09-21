@@ -5,6 +5,7 @@ import { motion, useAnimation, type Variants } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import ButtonComponent from "../../../components/ui/ButtonComponent";
+import MatrixAvatarCard from "../../../components/MatrixAvatarCard";
 
 export default function About() {
   const ref = useRef(null);
@@ -130,21 +131,15 @@ export default function About() {
         </motion.div>
 
         <motion.div
-          className="relative w-full md:w-1/2 m-auto flex justify-center"
+          className="relative w-full md:w-1/2 flex justify-center items-center py-6"
           variants={itemVariants}
         >
-          <motion.div
-            className="relative w-[280px] h-[350px] rounded-3xl backdrop-blur-md"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img
-              src="/me.png"
-              alt="MD RIDOY BABU - Full Stack & Backend Developer"
-              className="object-cover w-full h-full filter drop-shadow-[0_0_25px_#14b8a6] transition-all hover:drop-shadow-[0_0_35px_#14b8a6]"
-            />
-          </motion.div>
-          <div className="absolute -bottom-4 -right-4 w-[280px] h-[350px] rounded-3xl -z-10"></div>
+          <MatrixAvatarCard
+            src="/me.png"
+            alt="MD RIDOY BABU - Full Stack & Backend Developer"
+            themeColor="#00f0ff"
+            initialColorMode="theme"
+          />
         </motion.div>
       </motion.div>
     </section>
